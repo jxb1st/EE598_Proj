@@ -1,20 +1,22 @@
 # TODO
 
-## Milestones
+## Completed
 
-- [x] Finalize core definitions in `EE598Proj/Defs.lean`:
-   - `Word`, `Language`
-   - `DFA`, `NFA`
-   - acceptance semantics
-- [x] Add concrete examples in `EE598Proj/Examples.lean`:
-   - at least one DFA
-   - at least one NFA
-   - sample accepted/rejected words
-- [ ] Prove small helper lemmas for simulation behavior:
-   - evaluation on empty word
-   - one-step and two-step simplifications
-- [x] Define a minimal regular expression datatype and semantics.
-- [ ] Prototype NFA-to-DFA powerset construction (without epsilon transitions).
-- [ ] State and prove one correctness theorem for the conversion.
-- [x] Expand README with architecture notes, limitations, and next steps.
-- [ ] Prepare a 2-minute presentation summary and demo script.
+- [x] Core definitions in `Defs.lean`: `Word`, `Language`, `DFA`, `NFA`, acceptance semantics
+- [x] `RegExp` datatype and denotational semantics `RegExp.denote`
+- [x] Doc comments on all definitions and theorems
+- [x] Helper lemmas in `Lemmas.lean`: eval base cases, cons unfolding, append composition, monotonicity
+- [x] NFA-to-DFA powerset construction in `Powerset.lean`
+- [x] Correctness theorem: `NFA.toDFA_correct`
+- [x] Concrete examples in `Examples.lean`: DFA, NFA, RegExp with named acceptance/rejection theorems
+- [x] Powerset construction examples demonstrating preservation of acceptance/rejection
+- [x] README with project goal, definitions, theorems, references, and future work
+
+## Future / Stretch Goals
+
+- [ ] Epsilon transitions and ε-closure
+- [ ] Thompson's construction (RegExp → NFA)
+- [ ] Closure properties of regular languages
+- [ ] Pumping Lemma
+- [ ] Decidable acceptance for finite types
+- [ ] DFA minimization
